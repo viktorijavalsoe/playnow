@@ -1,0 +1,132 @@
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $light_color;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid $grey;
+    width: 80%; /* Could be more or less, depending on screen size */
+    @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+      .modal__content-left{
+        order:2;
+      
+          .modal__content-title, .modal__content-text{
+            @extend %subheading_light;
+            padding-bottom: 1rem;
+          }
+
+          .modal__content-title{
+            text-decoration: underline;
+          }
+
+          .modal__content-link{
+            @extend %link_text;
+          }
+    
+      }
+
+      .modal__content-right{
+        order:1;
+          
+        /* The Close Button */ 
+        .btn-close {
+          color: $lighter_color;
+          float: right;
+          font-size: 28px;
+  
+            &:hover,
+            &close:focus {
+              color: $orange;
+              text-decoration: none;
+              cursor: pointer;
+            }
+        }
+
+        .modal_image{
+          height: 250px;
+          padding: 2rem;
+        }
+  
+        .modal__content-text{
+          @extend %subheading_light;
+          margin-top: 0;
+        }
+      }
+    }   
+
+  // everything we write in here is gonna be placed in tablet mixin
+  @include tablet{  
+      .modal-content{
+        width: 80%;
+        @include flex;
+        justify-content: space-around;
+        .modal__content-left{
+          order: 1;
+          margin: 4rem;
+        }  
+    
+        .modal__content-right{
+          order: 2;
+          margin: 4rem;
+
+          .btn-close {
+            position: absolute;
+            top: 14%;
+            right: 12%;
+          }
+
+          .modal_image{
+            padding:0;
+          }
+        } 
+
+        .modal__content-left{
+          display: flex;
+          flex-direction: column;
+
+          .modal__content-link{
+            margin-top: 80px;
+          }
+        }
+      }  
+  
+  }
+
+  @include desktop{
+    .modal-content{
+      width: 60%;
+      .modal__content-right{
+
+        .btn-close {
+          position: absolute;
+          top: 35%;
+          right: 22%;
+        }
+
+        .modal_image{
+          padding:0;
+        }
+      } 
+    }  
+
+  }
+      
+}

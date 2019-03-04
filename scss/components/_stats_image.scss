@@ -1,0 +1,127 @@
+//Styling form stats image of triangle shapes
+.stats{
+
+  margin: 2rem;
+  margin-top: 80px;
+
+  .stats__content-text{
+    @extend %subheading_light;
+    text-align: center;
+  }
+  
+  .stats_text_wrapper{
+
+    .lower_text{
+      margin-right: 8rem;
+     }
+   
+     .selected_color{
+       color: $red;
+       font-family: $font-family-display;
+     }
+     .colored{
+       color: #674c46;
+       margin-right: 8rem;
+       margin-bottom: 2rem;
+       font-family: $font-family-display;
+     }
+
+     @include tablet{
+      margin-top:80px;
+     }
+   
+  }
+  
+  .stats__heading{
+    @extend %heading_light;
+    margin-bottom: 2rem;
+    
+  }
+  .stats__content{
+    @include flex;
+    justify-content: center;
+    
+    .stats__content-text-wrapper{
+      flex: 1;
+        .stats__content-text{
+          @extend %subheading_light;
+          text-align: right;
+        }
+    }
+
+    .stats__content-image-wrapper{
+      flex: 2;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      height: 100px;
+      width: 100px;
+      position: relative;
+
+
+      .stats__content-image-txt{
+        @extend %heading_light;
+        position: absolute;
+        top: 30%;
+        left: 27%;
+      }
+
+      .stats__content-image{
+        height: 70px;
+        position: absolute;
+      }
+
+      .yellow_triangle{
+        bottom: 80%;
+        right: 70%;
+      }
+
+      .blue_triangle{
+        top: 30%;
+        left: 30%;
+  
+      }
+
+      .green_triangle{
+        top: 30%;
+        right: 77%;
+      }
+
+      .red_triangle{
+        bottom: 80%;
+        left: 30%;
+      }
+    }
+    @include tablet{
+
+      .stats__content-image-wrapper{
+  
+        .stats__content-image{
+          height: 120px;
+        }
+  
+      }
+    }
+
+
+    @include desktop{
+
+      .stats__content-image-wrapper{
+  
+        .stats__content-image{
+          height: 200px;
+        }
+
+      }
+    } 
+  }
+
+  @include desktop{
+    margin-top: 180px;
+  }
+ 
+}
+
+
+
+
+

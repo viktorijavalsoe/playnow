@@ -1,0 +1,77 @@
+
+//Styling for sign in form
+
+//Form
+
+.signin_form-wrapper{
+  text-align: center;
+
+  .signin_form{  
+    @include flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    position: relative;
+
+    .form_label{
+      @extend %subheading_light;
+      //margin-top: 80px;
+    }
+
+    .username_label{
+      align-self: flex-start;
+
+    }
+
+    .password_label{
+      align-self: flex-end;
+      margin-top: 100px;
+
+    }
+
+    .input_field{
+      height: 40px;
+      border: 3px solid black;
+    }
+
+    .input_username{
+      margin-right: 6rem;
+    }
+
+    .input_password{
+      margin-left: 6rem;
+    }
+
+    //Triangle edges
+    #red_shape{
+      height: 100px;
+      position: absolute;
+      top: -5%;
+      right: 1%;
+    }
+
+    #green_shape{
+      height: 100px;
+      position: absolute;
+      top: 63%;
+      left: -6%;
+  
+    }
+
+    #red_shape.change .st1{
+      fill: $orange;
+      stroke: $orange;
+    }
+
+
+    #green_shape.change .st0{
+      fill: $blue;
+      stroke: $blue;
+    }
+  }
+}
+
+
+
+
+

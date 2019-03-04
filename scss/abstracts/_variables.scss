@@ -1,0 +1,29 @@
+//Colors
+$main_color:#1c1c1c;
+
+// darken & lighten are build in functions
+
+$light_color: lighten($main_color, 3);
+$lighter_color: lighten($main_color, 40);
+$dark_color: darken($main_color, 60);
+$comp_color: complement($main_color);
+
+//brand colors
+$red: #7e263d;
+$green: #267e67;
+$orange: #d68618;
+$blue: #202c61;
+$grey: #e5e5e5;
+$dark_grey: #a5a5a5;
+
+// Font family
+$font-family-text:'Roboto', sans-serif; 
+$font-family-display: 'IBM Plex Mono', monospace;
+
+
+//Typography
+
+$font-size-extra-small: 0.9rem;
+$font-size-small: 1rem;
+$font-size-regular: 1.5rem;
+$font-size-large: 2rem;

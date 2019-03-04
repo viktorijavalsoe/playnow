@@ -1,0 +1,32 @@
+@mixin flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin tablet{
+  @media screen and (min-width: 768px) {
+    // content is what is going to be included in our media query
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media screen and (min-width: 1024px) {
+    // content is what is going to be included in our media query
+    @content;
+  }
+}
+
+
+//create cariable that gets background color of teh site
+@function text_color($bg_color){
+  //lightness build in function in SASS 0 is white, 100 is black
+  // as long as the lightness is brighter than 50%, retur black color
+  @if(lightness($bg_color)>50){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+
+}

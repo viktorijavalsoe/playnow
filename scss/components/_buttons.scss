@@ -1,0 +1,177 @@
+//Toggle button
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+
+  
+  input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      //background-color: #2196F3;
+    } 
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(65px);
+    -ms-transform: translateX(65px);
+    transform: translateX(65px);
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $main_color;
+    border: 1px solid $grey;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 37px;
+      width: 80px;
+      //left: 4px;
+      bottom: 1px;
+      top: 1px;
+      background-color: $light_color;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    &:after{
+      content:'Sign in';
+      color: $grey;
+      display: block;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 40%;
+      right: -10%;
+      @extend %subheading_light;
+    }
+  } 
+  
+  input:checked + .slider:after{  
+    content:'Sign up';
+    top: 50%;
+    left: 75%;  
+  }
+
+  @include tablet{
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(80px);
+      -ms-transform: translateX(80px);
+      transform: translateX(80px);
+    }
+
+    .slider{
+
+      width: 200px;
+
+    
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 37px;
+      width: 120px;
+      //left: 4px;
+      bottom: 1px;
+      top: 1px;
+      background-color: $light_color;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    }
+    
+
+  }
+}
+
+.stats_btn{
+
+  .stats_btn_slider{
+    
+    &:after{
+      content:'Show clicks';
+
+    }
+  }
+  input:checked + .slider:after{  
+    content:'Hide clicks';
+    left: 65%; 
+
+  }
+}
+
+.submit_button{
+  @include flex;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  flex-direction: row;
+  margin: 0;
+  cursor: pointer;
+
+  &:focus{
+    border: none;
+  }
+
+  .submit_button_name{
+    @extend %heading_light;
+    position: absolute;
+    left:30%;
+    top: 46%;
+
+    &:hover{
+      color: $orange;
+    }
+
+    
+
+    #submit_text{
+      color: black;
+      font-weight: 600;
+    }
+  }
+
+  #white_shape{
+    height:80px;
+    position: absolute;
+    top:35%;
+    left:33%;
+    z-index: -1;
+
+    @include tablet{
+      top:35%;
+      left:32%;
+    }
+
+    @include desktop{
+      top:34%;
+      left:32%;
+      height:100px;
+    }
+  }
+  .st3{
+    fill: white;
+    stroke: black;
+
+    }
+  }
+
+
+
+

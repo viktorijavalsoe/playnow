@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+   
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <title>Play... now what?</title>
+</head>
+
+<body id="stats">
+    <header>
+
+        <div class="header__content"> 
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo__img" src="images/playwhatnow_collapsed_logo@2x.png" alt="three triangles logo">
+                </a>  
+             </div>
+             <h2 class="logo__headline">play... what now?</h2>
+           
+             <div id="toggle_wrapper" class="toggle">
+                <div id="hamburger" role="button"  arial-label="navigation" aria-controls="menu" aria-pressed="false" class="toggle__icon"> 
+                    <span class="toggle__icon-item one"></span>
+                    <span class="toggle__icon-item two"></span>
+                    <span class="toggle__icon-item three"></span>
+                </div>
+            </div>
+        </div> 
+           
+            <nav id="menu" role="navigation">
+                <ul class="nav__menu" aria-pressed="true">
+                    <li class="nav__menu-item"><a class="nav__menu-link" href="index.html">album</a></li>
+                    <li class="nav__menu-item"><a class="nav__menu-link" href="artists.html">artists</a></li>
+                    <li class="nav__menu-item"><a class="active" href="stats.html">stats</a></li>
+                </ul>
+            </nav>
+    
+      </header>
+
+    <main> 
+        <aside class="logo__headline-mobile"><h2 class="logo__headline-mobile-text">play... what now?<h2></aside>
+        <section id="stats_section" class="stats">
+                <div>
+                    <h2 id='result'></h2>
+                </div>
+        
+            <div class="stats__content">
+                <div class="stats__content-image-wrapper">
+                    <object class="stats__content-image yellow_triangle" data="images/yellow_triangle.svg" type="image/svg+xml"></object>
+                    <object class="stats__content-image red_triangle" data="images/red_triangle.svg" type="image/svg+xml"></object> 
+                    <object class="stats__content-image green_triangle" data="images/green_triangle.svg" type="image/svg+xml"></object>
+                    <object class="stats__content-image blue_triangle" data="images/blue_triangle.svg" type="image/svg+xml"></object>
+                    <h2 class="stats__content-image-txt">clics</h2>
+                </div>
+                <div class="stats__content-text-wrapper">
+                    <h2 class="stats__content-text">Here you'll find settings and statistics to further personalize your experience</h2>
+                </div>
+            </div>
+            <div class="stats_text_wrapper">
+                <h2 class="stats__content-text">Your most clicked is <span class="selected_color">danceble</span></h2>
+                <h2 class="stats__content-text lower_text">Your average color is</h2>
+                <h2 class="stats__content-text colored">#674c46 (103, 76, 70)</h2>
+            </div>
+        </section>
+
+        <section class="controls_wrapper">
+        <div class="buttons">
+            <!--Show Stats Toggle-->
+            <label role="button" class="switch stats_btn" role="switch" aria-checked="true">
+                <input type="checkbox" id="show_stats_toggle">
+                <span class="slider stats_btn_slider"></span>
+            </label>
+        
+            <!-- Sign in switch -->
+       
+            <label role="button" class="switch" role="switch" aria-checked="true">
+                <input type="checkbox" id="switch_toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="form">
+            <div class='signin_form-wrapper'>
+                <form class='signin_form'>
+                    <lable id='usernameField' class="form_label username_label" for='usernameField'>Username:</lable>
+                    <input id='username' class="input_field input_username" type='text'></input>
+                    <div class="shape_icon">
+                        <svg version="1.1" id="red_shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                        <style type="text/css">
+                       .st1{fill:#7E263D;stroke:#7E263D;stroke-miterlimit:10;}
+                        </style>
+                        <polygon class="st1" points="192.4,99.3 101.3,194.7 101.3,12.3 "/>
+                        </svg>
+                    </div>  
+        
+                    <lable id='passwordLable' class="form_label password_label" for='passwordField'>Password:</lable>
+                    <input id='passwordField'class="input_field input_password" type='password'></input>
+                    <div>
+                        <svg version="1.1" id="green_shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                    viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                        <style type="text/css">
+	                    .st0{fill:#267E67;stroke:#267E67;stroke-miterlimit:10;}
+                        </style>
+                        <polygon class="st0" points="56.2,105.2 147.2,9.8 147.3,192.2 "/>
+                        </svg>
+                    </div>     
+                    
+                        <button class="submit_button" type='button'>
+                            <h2 class="submit_button_name" id="submit_button_text">Sign <span id="submit_text"></span></h2>
+                            <svg version="1.1" id="white_shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                            <style type="text/css">
+                           .st3{fill:#7E263D;stroke:#7E263D;stroke-miterlimit:10;}
+                            </style>
+                            <polygon class="st3" points="192.4,99.3 101.3,194.7 101.3,12.3 "/>
+                            </svg>
+                        </button>
+                   
+                </form>       
+            </div> 
+        </div>
+    </section>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="play_now.js"></script>
+</body> 
+
+<footer>
+
+</footer>
+
+</html>

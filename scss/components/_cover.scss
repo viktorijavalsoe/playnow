@@ -1,0 +1,199 @@
+main{
+
+  @include flex;
+  flex-direction: column;
+
+    .logo__headline-mobile {
+      display: block;
+      padding: 15px;
+        
+      .logo__headline-mobile-text{
+        @extend %subheading;
+    }
+     
+  }
+  
+  .main__wrapper {
+     @include flex;
+     justify-content: center;
+     padding: 20px;
+     margin-top: 5rem;
+     margin-bottom: 5rem;
+
+    .main__content{
+    
+      @include flex;
+      justify-content: center;
+      align-items: center;
+      //border: 1px red solid;
+      height: 250px;
+      width: 250px;
+      position: relative;
+
+      .main__content.close .soothing{
+        //left: -25%;
+
+      }
+        .main__content-image{
+          height: 200px;
+          position: absolute;
+         }
+  
+        .main__content-cta_figure {
+          position: absolute;
+          width: 100px;
+        }
+
+        .main__content-category, .main_content-header, .main_content-title{
+          position: absolute; 
+        }
+        
+        .main_content-header{
+          @extend %heading;
+          top: -5%;
+          
+        }
+
+        .main_content-title{
+          @extend %body_text;
+          bottom: -7%;
+        }
+      
+        .main__content-category{
+          @extend %link_text;
+          
+        }
+      
+      // cta-image styling
+        .blue{
+          bottom: -30%;
+          right: 10%;
+        }
+  
+        .green{
+          top: 53%;
+          left: -30%;
+          
+        }
+  
+        .red{
+          bottom: 53%;
+          right: -20%;
+        }
+  
+        .yellow{
+          top: -30%;
+          left: 10%;
+        }
+
+      //cta-category styling  
+
+        .soothing{
+          left: -22%;
+          top: 47%;
+        }
+
+        .intense{
+          right: -19%;
+          top: 47%;
+        }
+
+        .danceble{
+          top: -22%;
+          right: 20%;
+
+        }
+
+        .emotional{
+          bottom: -22%;
+          left: 20%;
+
+        }
+      }
+  }
+
+  .main__text{
+    margin-top: 4rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+
+    .main_text-title{
+      @extend %body_text;
+      margin-bottom: 2rem;
+
+    }
+    
+    .main_text-text{
+      @extend %body_text_light;
+    }
+
+  }
+  
+  // everything we write in here is gonna be placed in tablet mixin
+  @include tablet{  
+    @include flex;
+    .logo__headline-mobile{
+      display: none;
+    }
+
+    .main__wrapper{
+      
+      .main__content{
+        margin-top:10rem;
+        margin-bottom: 10rem;
+        
+          .green{
+            top: 92%;
+            left: -80%; 
+             
+          }
+
+          .red{
+            bottom: 92%;
+            right: -70%;
+          }
+
+          .blue{
+            bottom: -70%;
+            right: -30%;
+          }
+
+          .yellow{
+            top: -70%;
+            left: -30%;
+          }
+    
+
+          .soothing{
+            left: -70%;
+            top: 80%;
+          }
+
+          .intense{
+            right: -68%;
+            top: 15%;
+          }
+  
+          .danceble{
+            top: -60%;
+            left: -30%;
+  
+          }
+  
+          .emotional{
+            bottom: -65%;
+            right: -30%;
+  
+          }
+        
+        .main__content-image{
+          height: 400px;
+        }
+      }
+    }
+  } //TABLET
+
+  @include desktop{
+  }
+
+}//main

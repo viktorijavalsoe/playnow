@@ -1,0 +1,43 @@
+//Styling for artist page gallery
+
+.gallery{
+  @include flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .album{
+  
+    .album__gallery-image{
+      height: 140px;
+    }
+  
+    .album__gallery-heading{
+      @extend %subheading_light;
+      margin-top: 2rem;
+    }
+  }
+
+  @include tablet{
+    .album{
+      margin: 2rem;
+
+      .album__gallery-image{
+        height: 200px;
+      }
+
+    }
+
+  }
+
+  @include desktop{
+    .album{
+      .album__gallery-image{
+        height: 300px;
+      }
+    } 
+
+  }
+
+  
+}

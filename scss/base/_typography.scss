@@ -1,0 +1,81 @@
+html {
+  font-size: 12px;
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+
+%heading{
+  font-size: 2rem;
+  color: $grey;
+  font-family: $font-family-display;
+}
+
+%heading_light{
+  @extend %heading;
+  font-weight: 100;
+  font-family: $font-family-text;
+}
+
+%subheading{
+  font-size: 1.2rem;   
+  font-family: $font-family-display;
+  color: $dark_grey; 
+}
+
+%subheading_light{
+  font-size: 1.2rem;   
+  font-family: $font-family-text;
+  font-weight: 100;
+  color: $grey; 
+}
+
+
+%link{
+  font-size: 1.2rem;
+
+    &:hover{
+      color: $orange;
+      text-decoration: none;          
+  }
+}
+
+%link_display{
+  @extend %link;
+  color: $grey;
+  font-family: $font-family-display;
+}
+
+%link_text{
+  @extend %link;
+  font-family: $font-family-text;
+  color: $grey; 
+  font-weight: 100;
+
+}
+
+%body_text{
+  font-size: 1rem;
+  color: $grey;
+  font-family: $font-family-text;
+}
+
+%body_text_light{
+  @extend %body_text;
+  font-weight: 300;
+}

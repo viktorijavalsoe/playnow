@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <link rel="stylesheet" href="css/style.css">
+   
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Roboto:100,300,400" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+      <title>Play... now what?</title>
+  </head>
+
+  <body id="artists">
+
+    <header>
+
+        <div class="header__content"> 
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo__img" src="images/playwhatnow_collapsed_logo@2x.png" alt="three triangles logo">
+                </a>  
+             </div>
+             <h2 class="logo__headline">play... what now?</h2>
+           
+             <div id="toggle_wrapper" class="toggle">
+                <div id="hamburger" role="button" arial-label="navigation" aria-controls="menu" aria-pressed="false" class="toggle__icon"> 
+                    <span class="toggle__icon-item one"></span>
+                    <span class="toggle__icon-item two"></span>
+                    <span class="toggle__icon-item three"></span>
+                </div>
+            </div>
+        </div> 
+           
+            <nav id="menu" role="navigation">
+                <ul class="nav__menu" aria-pressed="true">
+                    <li class="nav__menu-item"><a class="nav__menu-link" href="index.html">album</a></li>
+                    <li class="nav__menu-item"><a class="active" href="artists.html">artists</a></li>
+                    <li class="nav__menu-item"><a class="nav__menu-link" href="stats.html">stats</a></li>
+                </ul>
+            </nav>
+    
+      </header>
+
+    <main>
+        <aside class="logo__headline-mobile"><h2 class="logo__headline-mobile-text">play... what now?<h2></aside>
+        <section class="gallery">
+
+            <!-- Trigger/Open The Modal One-->
+            <button id="btn-one" class="album" aria-haspopup="true" aria-expanded="false">
+                <img class="album__gallery-image" src="images/in_color.png" alt="In color Album cover">
+                <h2 class="album__gallery-heading">Jamie XX</h2>
+            </button>
+            <!-- Modal One-->
+            <div id="modalOne" class="modal" role="dialogbox" aria-modal="true">
+            <!-- Modal content one-->
+            <div class="modal-content">
+                    <div class="modal__content-left">
+                        <h2 class="modal__content-title">Oh my Gosh</h2>
+                        <p class="modal__content-text">Albums in guide: 7</p>
+                        <p class="modal__content-text">Path option: 19</p>
+                        <a class="modal__content-link" href="">Start</a>
+                    </div>
+      
+                    <div class="modal__content-right">
+                        <span class="close_album_one btn-close" role="button" aria-label="close">&times;</span>
+                        <p class="modal__content-text">Starting album: In Color</p>
+                        <img class="modal_image" src="images/in_color.png" alt="In color Album cover">
+                    </div>
+                       
+                </div>
+            </div>
+
+           <!-- Trigger/Open The Modal Two-->
+           <button id="btn-two" class="album" aria-haspopup="true" aria-expanded="false">
+                <img class="album__gallery-image" src="images/overgrown.jpg" alt="Overgrown Album Cover">
+                <h2 class="album__gallery-heading">James Blake</h2>
+            </button>
+           
+            <div id="modalTwo" class="modal" role="dialogbox" aria-modal="true">
+                    
+                <div class="modal-content">
+                     <div class="modal__content-left">
+                        <h2 class="modal__content-title">Retrograde</h2>
+                        <p class="modal__content-text">Albums in guide: 7</p>
+                        <p class="modal__content-text">Path option: 19</p>
+                        <a class="modal__content-link" href="">Start</a>
+                    </div>
+              
+                    <div class="modal__content-right">
+                        <span class="close_album_two btn-close" role="button" aria-label="close">&times;</span>
+                        <p class="modal__content-text">Starting album: Overgrown</p>
+                        <img class="modal_image" src="images/overgrown.jpg" alt="Overgrown Album Cover">
+                    </div>
+                               
+                </div>
+            </div>
+            
+            <!-- Trigger/Open The Modal Three-->
+            <button id="btn-three" class="album" aria-haspopup="true" aria-expanded="false">
+                    <img class="album__gallery-image" src="images/kendric_lamar.png" alt="Damn Album Cover">
+                    <h2 class="album__gallery-heading">Kendric Lamar</h2>
+                </button>
+               
+                <div id="modalThree" class="modal" role="dialogbox" aria-modal="true">
+                        
+                    <div class="modal-content">
+                         <div class="modal__content-left">
+                            <h2 class="modal__content-title">DAMN</h2>
+                            <p class="modal__content-text">Albums in guide: 7</p>
+                            <p class="modal__content-text">Path option: 19</p>
+                            <a class="modal__content-link" href="">Start</a>
+                        </div>
+                  
+                        <div class="modal__content-right">
+                            <span class="close_album_three btn-close" role="button" aria-label="close">&times;</span>
+                            <p class="modal__content-text">Starting album: DAMN</p>
+                            <img class="modal_image" src="images/kendric_lamar.png" alt="Damn Album Cover">
+                        </div>
+                                   
+                    </div>
+                </div>
+                 
+            <!-- Trigger/Open The Modal Four-->
+            <button id="btn-four" class="album" aria-haspopup="true" aria-expanded="false">
+                <img class="album__gallery-image" src="images/sbtrkt.png" alt="SBTRKT Album cover">
+                <h2 class="album__gallery-heading">SBTRKT</h2>
+            </button>
+
+            <div id="modalFour" class="modal" role="dialogbox" aria-modal="true">
+                        
+                <div class="modal-content">
+                    <div class="modal__content-left">
+                        <h2 class="modal__content-title">SBTRKT</h2>
+                        <p class="modal__content-text">Albums in guide: 7</p>
+                        <p class="modal__content-text">Path option: 1   </p>
+                        <a class="modal__content-link" href="">Start</a>
+                    </div>
+                  
+                    <div class="modal__content-right">
+                        <span class="close_album_four btn-close" role="button" aria-label="close">&times;</span>
+                        <p class="modal__content-text">Starting album: DAMN</p>
+                        <img class="modal_image" src="images/sbtrkt.png" alt="SBTRKT Album cover">
+                    </div>
+                                   
+                </div>
+            </div>
+                
+            <!-- Trigger/Open The Modal Five-->
+            <button id="btn-five" class="album" aria-haspopup="true" aria-expanded="false">
+                <img class="album__gallery-image" src="images/sampha_process.png" alt="PROCESS Album Cover">
+                <h2 class="album__gallery-heading">Sampha</h2>
+            </button>
+            <div id="modalFive" class="modal" role="dialogbox" aria-modal="true">
+                            
+                <div class="modal-content">
+                    <div class="modal__content-left">
+                        <h2 class="modal__content-title">SBTRKT</h2>
+                        <p class="modal__content-text">Albums in guide: 7</p>
+                        <p class="modal__content-text">Path option: 1   </p>
+                        <a class="modal__content-link" href="">Start</a>
+                    </div>
+                        
+                    <div class="modal__content-right">
+                        <span class="close_album_five btn-close" role="button" aria-label="close">&times;</span>
+                        <p class="modal__content-text">Starting album: Process</p>
+                        <img class="modal_image" src="images/sampha_process.png" alt="Process Album cover">
+                    </div>
+                                        
+                </div>
+            </div>    
+
+             <!-- Trigger/Open The Modal Six-->
+             <button id="btn-six" class="album" aria-haspopup="true" aria-expanded="false">
+                <img class="album__gallery-image" src="images/ashes_and_ice.png" alt="Ashes and Ice Album Cover by the Kills">
+                <h2 class="album__gallery-heading">The Kills</h2>
+            </button>
+            <div id="modalSix" class="modal" role="dialogbox" aria-modal="true">
+                            
+                <div class="modal-content">
+                    <div class="modal__content-left">
+                        <h2 class="modal__content-title">Doing it to death</h2>
+                        <p class="modal__content-text">Albums in guide: 6</p>
+                        <p class="modal__content-text">Path option: 12   </p>
+                        <a class="modal__content-link" href="">Start</a>
+                    </div>
+                        
+                    <div class="modal__content-right">
+                        <span class="close_album_six btn-close" role="button" aria-label="close">&times;</span>
+                        <p class="modal__content-text">Starting album: Process</p>
+                        <img class="modal_image" src="images/ashes_and_ice.png" alt="Ashes and Ice Album Cover by the Kills">
+                    </div>
+                                        
+                </div>
+            </div>  
+          
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="play_now.js"></script>
+  
+  </body>
+
+</html>
